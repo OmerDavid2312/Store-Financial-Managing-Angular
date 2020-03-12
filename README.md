@@ -1,4 +1,21 @@
 # financial-manager
+Track Expenses and Incomes of the store and manage clients who owe money to the store
+<hr>
+The system created with Angular8 and Firebase Database.
+<hr>
+<b>Features</b>:
+<ul>
+  <li>Track expenses by categories</li>
+  <li>Track incomes</li>
+  <li>CRUD clients who owe money</li>
+  <li>Login and register system by Email or Google account</li>
+  <li>Create notes and filter by All/Future/Today/Passed Notes!</li>
+  <li>Get notification of today's notes </li>
+</ul>
+<hr>
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
 
