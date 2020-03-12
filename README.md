@@ -17,7 +17,10 @@ The system created with Angular8 and Firebase Database.
 </ul>
 <hr>
 
+<br><br>
+<img src="https://i.gyazo.com/45f909924bc77b1ba252db107edc5887.png" width="100%">
 
+<hr>
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
