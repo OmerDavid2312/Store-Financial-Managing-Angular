@@ -1,5 +1,6 @@
 # financial-manager
 Track Expenses and Incomes of the store and manage clients who owe money to the store
+*To install this project, Run the command : npm install
 <hr>
 The system created with Angular8 and Firebase Database.
 <hr>
