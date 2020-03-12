@@ -18,8 +18,8 @@ The system created with Angular8 and Firebase Database.
 <hr>
 
 <br><br>
-<img src="https://i.gyazo.com/e2f54ab0de9efe14dea85498b57f7426.png" width="100%">
-<img src="https://i.gyazo.com/301ef166e96bda0ab4c57212dc71b850.png" width="100%">
+<img src="https://i.gyazo.com/e8d4768bb6407ef90ab39fde1980568e.png" width="100%">
+<img src="https://i.gyazo.com/86d08d65cc0edcd19c6baca1f9b89401.png" width="100%">
 
 
 <hr>
