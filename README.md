@@ -18,7 +18,7 @@ The system created with Angular8 and Firebase Database.
 <hr>
 
 <br><br>
-<img src="https://i.gyazo.com/45f909924bc77b1ba252db107edc5887.png" width="100%">
+<img src="https://media.giphy.com/media/J2BxZpIADYU4EKcXgQ/giphy.gif" width="100%">
 
 <hr>
 
