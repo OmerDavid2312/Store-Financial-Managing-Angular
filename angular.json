@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "clients-manager": {
+    "financial-manager": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/clients-manager",
+            "outputPath": "dist/financial-manager",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css","src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -63,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "clients-manager:build"
+            "browserTarget": "financial-manager:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "clients-manager:build:production"
+              "browserTarget": "financial-manager:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "clients-manager:build"
+            "browserTarget": "financial-manager:build"
           }
         },
         "test": {
@@ -111,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "clients-manager:serve"
+            "devServerTarget": "anager:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "clients-manager:serve:production"
+              "devServerTarget": "financial-manager:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "clients-manager"
+  "defaultProject": "financial-manager"
 }

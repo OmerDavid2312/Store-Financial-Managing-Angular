@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-6">
+        <h2><i class="fas fa-plus text-info"></i> Incomes</h2>
+        
+    </div>
+    <div class="col-md-6">
+        <h5 class="text-right text-success" *ngIf="income">Total incomes : {{income?.incomes | currency:"USD":"symbol"}}</h5>
+    </div>
+</div>
+<p class="font-weight-light">Track incomes balance</p>
+<div class="card mt-3 mb-5">
+    <h5 class="card-header">Total Incomes</h5>
+    <div class="card-body">
+      <h5 class="card-title text-success" *ngIf="income" >{{income.incomes | currency:"USD":"symbol"}}
+        <small style="display: inline;">
+            <a (click)="showIncomeInput = !showIncomeInput"><i class="fa fa-pencil"></i></a>
+         </small>
+      </h5>
+      <div class="clearfix">
+        <form *ngIf="showIncomeInput" (submit)="updateIncomes()">
+            <div class="input-group">
+                <input type="number" name="balance" class="form-control" [(ngModel)]="income.incomes" >
+                <span class="input-group-btn"><button type="submit" class="btn btn-info" >Update Incomes</button></span>
+            </div>
+        </form>
+    </div>
+
+    </div>
+  </div>

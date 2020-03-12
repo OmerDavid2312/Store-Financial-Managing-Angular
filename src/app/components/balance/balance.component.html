@@ -1,0 +1,34 @@
+
+  <div class="row mb-3 mt-3 text-center">
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3" >
+            <div class="card-header"><b><i class="fas fa-plus-circle"></i> Total Incomes</b></div>
+            <div class="card-body">
+              <h5 class="card-title"><b>+{{totalIncome | currency}}</b></h5>
+              
+        </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        
+    <div class="card text-white bg-info mb-3" >
+        <div class="card-header"><b><i class="fas fa-balance-scale-right"></i> Balance</b></div>
+        <div class="card-body">
+          <h5 class="card-title"><b>{{totalIncome - totalClientsOwedBalance - totalExp | currency}}</b></h5>
+          
+        </div>
+    </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-danger mb-3" >
+            <div class="card-header "><b><i class="fas fa-minus-circle"></i> Financial Losses</b></div>
+            <div class="card-body">
+              <h5 class="card-title"><b>-{{totalClientsOwedBalance + totalExp | currency}}</b></h5>
+              
+            </div>
+        </div>
+    </div>
+
+ 
+
+</div>

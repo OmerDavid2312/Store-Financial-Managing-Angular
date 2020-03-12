@@ -1,0 +1,27 @@
+<app-balance></app-balance>
+<div class="row">
+    <div class="col-md-10">
+        <app-clients></app-clients>
+    </div>
+    <div class="col-md-2">
+        <a routerLink="/client/add" role="button" class="btn btn-success btn-block">
+            <i class="fa fa-plus"></i> New
+            </a>  
+            
+            <button class="btn btn-info btn-block" (click)="print()"><i class="fa fa-print"></i> Print</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-10">
+        <app-expenses></app-expenses>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-10">
+        <app-income></app-income>
+    </div>
+</div>
+
+

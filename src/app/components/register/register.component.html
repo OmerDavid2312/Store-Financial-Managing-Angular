@@ -1,0 +1,23 @@
+<div class="row m5-5">
+    <div class="col-md-6 mx-auto mt-5">
+        <div class="card mt-4">
+            <div class="card-body">
+                <h1 class="text-center pb-4 pt-3 text-info">
+                    <i class="fa fa-lock"></i>
+                    Financial Manager Register
+                </h1>
+                <form (submit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" [(ngModel)]="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" [(ngModel)]="password" required>
+                    </div>
+                    <span class="input-group-btn"><button type="submit" class="btn btn-info btn-block" [disabled]="!email || !password">Register</button></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

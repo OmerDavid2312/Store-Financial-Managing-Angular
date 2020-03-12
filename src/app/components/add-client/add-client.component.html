@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-md-6">
+        <a routerLink="/" class="btn btn-link text-info">
+        <i class="fa fa-arrow-left"></i> Back To Dashboard</a>
+    </div>
+    <div class="col-md-6">
+        
+    </div>
+</div>
+
+<div class="card mt-3">
+    <div class="card-header">
+        Add Client
+    </div>
+    <div class="card-body">
+        <form #clientForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" name="firstName"  [(ngModel)]="clientFirstName" minlength="2" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" name="lastName"  [(ngModel)]="clientLastName" minlength="2" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email"  [(ngModel)]="clientEmail"  required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" class="form-control" name="phone"  [(ngModel)]="clientPhone" minlength="10"  required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" class="form-control" name="date"  [(ngModel)]="clientDate" min="0"  required>
+            </div>
+            <div class="form-group">
+                <label for="balance">Balance</label>
+                <input type="number" class="form-control" name="balance"  [(ngModel)]="clientBalance" min="0" [disabled]="disableBalanceOnAdd"  required>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-info btn-block">
+        </form>
+    </div>
+    
+</div>

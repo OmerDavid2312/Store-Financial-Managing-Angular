@@ -1,0 +1,153 @@
+<div class="row">
+    <div class="col-md-6">
+        <h2><i class="fab fa-contao text-info"></i> Expenses</h2>
+        
+    </div>
+    <div class="col-md-6">
+        <h5 class="text-right text-danger" *ngIf="expenses">Total Expenses : {{totalExp | currency:"USD":"symbol"}}</h5>
+    </div>
+</div>
+<p class="font-weight-light">Track expenses by categories</p>
+
+<div class="row mt-4" *ngIf="expenses">
+
+    <div class="col-md-4 text-center">
+        <div class="card border-primary mb-3" >
+            <div class="card-header font-weight-bold"><i class="fas fa-money-check font-weight-bold text-primary"></i>
+               Employee wages
+               <small style="display: inline;">
+                <a (click)="showInputEmployeewages = !showInputEmployeewages"><i class="fa fa-pencil"></i></a>
+             </small>
+              </div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">{{expenses[0].employeeWages | currency:"USD":"symbol"}}</h5>
+              <div class="clearfix">
+                <form *ngIf="showInputEmployeewages" (submit)="updateExp()">
+                    <div class="input-group">
+                        <input type="number" name="balance" class="form-control" [(ngModel)]="expenses[0].employeeWages" >
+                        <span class="input-group-btn"><button type="submit" class="btn btn-primary btn-md" ><i class="fas fa-check-circle"></i></button></span>
+                    </div>
+                </form>
+            </div>
+              
+            </div>
+          </div>
+    </div>
+    <div class="col-md-4 text-center">
+        
+            <div class="card border-info mb-3" >
+                <div class="card-header font-weight-bold"><i class="fas fa-concierge-bell font-weight-bold text-info"></i> Services
+                  <small style="display: inline;">
+                    <a (click)="showInputservices  = !showInputservices "><i class="fa fa-pencil"></i></a>
+                 </small>
+                </div>
+                <div class="card-body text-info">
+                  <h5 class="card-title">{{expenses[0].services | currency:"USD":"symbol"}}</h5>
+                  <div class="clearfix">
+                    <form *ngIf="showInputservices" (submit)="updateExp()">
+                        <div class="input-group">
+                            <input type="number" name="balance" class="form-control" [(ngModel)]="expenses[0].services" >
+                            <span class="input-group-btn"><button type="submit" class="btn btn-info btn-md" ><i class="fas fa-check-circle"></i></button></span>
+                        </div>
+                    </form>
+                </div>
+                  
+                </div>
+              </div>
+        
+    </div>
+    <div class="col-md-4 text-center">
+        
+        <div class="card border-danger mb-3" >
+            <div class="card-header font-weight-bold"><i class="fas fa-home font-weight-bold text-danger"></i> Rent Or Lease 
+              <small style="display: inline;">
+                <a (click)="showInputrent  = !showInputrent "><i class="fa fa-pencil"></i></a>
+             </small>
+            </div>
+            <div class="card-body text-danger">
+              <h5 class="card-title">{{expenses[0].rentLeasePayments | currency:"USD":"symbol"}}</h5>
+              <div class="clearfix">
+                <form *ngIf="showInputrent" (submit)="updateExp()">
+                    <div class="input-group">
+                        <input type="number" name="balance" class="form-control" [(ngModel)]="expenses[0].rentLeasePayments" >
+                        <span class="input-group-btn"><button type="submit" class="btn btn-danger btn-md" ><i class="fas fa-check-circle"></i></button></span>
+                    </div>
+                </form>
+            </div>
+              
+            </div>
+          </div>
+    
+        </div>
+</div>
+<div class="row" *ngIf="expenses">
+    <div class="col-md-4 text-center">
+        
+        <div class="card border-warning mb-3" >
+            <div class="card-header font-weight-bold"><i class="fas fa-file-invoice-dollar font-weight-bold text-warning"></i> Taxes
+              <small style="display: inline;">
+                <a (click)="showInputtax  = !showInputtax "><i class="fa fa-pencil"></i></a>
+             </small>
+            </div>
+            <div class="card-body text-warning">
+              <h5 class="card-title">{{expenses[0].taxes | currency:"USD":"symbol"}}</h5>
+              <div class="clearfix">
+                <form *ngIf="showInputtax" (submit)="updateExp()">
+                    <div class="input-group">
+                        <input type="number" name="balance" class="form-control" [(ngModel)]="expenses[0].taxes" >
+                        <span class="input-group-btn"><button type="submit" class="btn btn-warning btn-md" ><i class="fas fa-check-circle"></i></button></span>
+                    </div>
+                </form>
+            </div>
+              
+            </div>
+          </div>
+    
+        </div>
+        <div class="col-md-4 text-center">
+        
+            <div class="card border-success  mb-3" >
+                <div class="card-header font-weight-bold"><i class="fas fa-tools font-weight-bold text-success "></i> Utilities
+                  <small style="display: inline;">
+                    <a (click)="showInpututil  = !showInpututil "><i class="fa fa-pencil"></i></a>
+                 </small>
+                </div>
+                <div class="card-body text-success ">
+                  <h5 class="card-title">{{expenses[0].utilities | currency:"USD":"symbol"}}</h5>
+                  <div class="clearfix">
+                    <form *ngIf="showInpututil" (submit)="updateExp()">
+                        <div class="input-group">
+                            <input type="number" name="balance" class="form-control" [(ngModel)]="expenses[0].utilities" >
+                            <span class="input-group-btn"><button type="submit" class="btn btn-success btn-md" ><i class="fas fa-check-circle"></i></button></span>
+                        </div>
+                    </form>
+                </div>
+                  
+                </div>
+              </div>
+        
+            </div>
+            <div class="col-md-4 text-center">
+        
+                <div class="card border-dark  mb-3" >
+                    <div class="card-header font-weight-bold"><i class="fas fa-taxi font-weight-bold text-dark "></i> Car And Truck
+                      <small style="display: inline;">
+                        <a (click)="showInputcar  = !showInputcar "><i class="fa fa-pencil"></i></a>
+                     </small>
+                    </div>
+                    <div class="card-body text-dark ">
+                      <h5 class="card-title">{{ expenses[0].carAndTruck | currency:"USD":"symbol"}}</h5>
+                      <div class="clearfix">
+                        <form *ngIf="showInputcar" (submit)="updateExp()">
+                            <div class="input-group">
+                                <input type="number" name="balance" class="form-control" [(ngModel)]="expenses[0].carAndTruck" >
+                                <span class="input-group-btn"><button type="submit" class="btn btn-dark btn-md" ><i class="fas fa-check-circle"></i></button></span>
+                            </div>
+                        </form>
+                    </div>
+                      
+                    </div>
+                  </div>
+            
+                </div>
+</div>

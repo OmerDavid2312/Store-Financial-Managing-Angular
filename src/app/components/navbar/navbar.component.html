@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
+    <div class="container">
+      <a routerLink="/" class="navbar-brand"><i class="fas fa-comments-dollar"></i> Financial Manager</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mr-auto">
+          <li *ngIf="isLoggedIn" class="nav-item"><a routerLink="/" class="nav-link">Dashboard</a></li>
+          <li *ngIf="isLoggedIn" class="nav-item"><a routerLink="/notes" class="nav-link">Notes</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li *ngIf="!isLoggedIn && showRegister"  class="nav-item"><a routerLink="/register" class="nav-link">Register</a></li>
+          <li *ngIf="!isLoggedIn && showRegister" class="nav-item"><a routerLink="/login" class="nav-link">Login</a></li>
+
+          <li *ngIf="isLoggedIn" class="nav-item"><a routerLink="/" class="nav-link text-white"><i class="fas fa-user"></i> {{loggedInUser}}</a></li>
+          <li *ngIf="isLoggedIn" class="nav-item"><a routerLink="/settings" class="nav-link text-white text-weight-bold"><i class="fas fa-sliders-h"></i> Settings</a></li>
+          <li *ngIf="isLoggedIn" class="nav-item" ><a (click)="logout()" style="cursor: pointer;" class=" nav-link text-white text-weight-bold"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>

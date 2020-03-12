@@ -1,0 +1,28 @@
+<div class="row m5-5">
+    <div class="col-md-6 mx-auto mt-5">
+        <div class="card mt-4">
+            <div class="card-body">
+                <h1 class="text-center pb-4 pt-3 text-info">
+                    <i class="fa fa-lock"></i>
+                    Financial Manager Login
+                </h1>
+                <form (submit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" [(ngModel)]="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" [(ngModel)]="password" required>
+                    </div>
+                    <span class="input-group-btn"><button type="submit"  class="btn btn-info btn-block" [disabled]="!email || !password">Login</button></span>
+                </form>
+                <a class="btn btn-outline-dark btn-block "(click)="logInGoogle()" role="button" style="text-transform:none">
+                    <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                    Login with Google
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
