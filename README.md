@@ -4,7 +4,7 @@ Track Expenses and Incomes of the store and manage clients who owe money to the 
 <hr>
 *To install this project, Run the command : npm install
 <hr>
-The system created with Angular8 and Firebase Database.
+The system created with <b>Angular8</b> and <b>Firebase Database.</b>
 <hr>
 <b>Features</b>:
 <ul>
